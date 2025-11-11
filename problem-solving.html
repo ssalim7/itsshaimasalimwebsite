@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Problem-Solving — Nori & Ember (Restaurant Case Study)</title>
+  <meta name="description" content="Restaurant digital transformation demo: social presence, contact, and an accessible booking/feedback form that generates an email.">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor"/></svg><span class="brand-text">Shaima</span></a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+        <ul>
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="skills.html">Skills</a></li>
+          <li><a class="nav-link" href="showcase.html">Showcase</a></li>
+          <li><a class="nav-link" href="problem-solving.html" aria-current="page">Problem-Solving</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main">
+    <section class="section container">
+      <h1>Nori & Ember — Digital Transformation Demo</h1>
+      <p class="lede">Goal: increase bookings, promote special event nights, and simplify communication without complex infrastructure.</p>
+
+      <div class="contact-block">
+        <div>
+          <h2>Social</h2>
+          <ul class="social">
+            <li><a href="#" aria-label="Instagram (placeholder)" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" aria-label="Facebook (placeholder)" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="#" aria-label="X / Twitter (placeholder)" target="_blank" rel="noopener">X / Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact</h2>
+          <address>
+            88 Market Street, Manchester M1 1AB<br>
+            <a href="tel:+441612223333">+44 161 222 3333</a><br>
+            <a href="mailto:bookings@nori-ember.example">bookings@nori-ember.example</a>
+          </address>
+        </div>
+      </div>
+
+      <h2>Make a booking or send feedback</h2>
+      <p>This form builds an email from your inputs (no database required). Fields with * are required.</p>
+
+      <form id="bookingForm" novalidate class="form">
+        <div class="grid-2">
+          <div class="field">
+            <label for="name">Name *</label>
+            <input id="name" name="name" autocomplete="name" required>
+            <small class="hint" id="nameHint">Your full name.</small>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+            <small class="hint" id="emailHint">We’ll send a confirmation to this address.</small>
+          </div>
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="type">Request type *</label>
+            <select id="type" name="type" required>
+              <option value="booking">Booking</option>
+              <option value="feedback">Feedback</option>
+              <option value="enquiry">General enquiry</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="date">Date *</label>
+            <input id="date" name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label for="time">Time *</label>
+            <input id="time" name="time" type="time" required>
+          </div>
+          <div class="field">
+            <label for="size">Party size *</label>
+            <input id="size" name="size" type="number" min="1" value="2" required>
+          </div>
+          <div class="field field-full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" maxlength="600" aria-describedby="charCount"></textarea>
+            <div class="muted" id="charCount" aria-live="polite">0 / 600</div>
+          </div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-primary" type="submit">Generate email</button>
+          <button class="btn btn-ghost" type="button" id="copyEmail">Copy email text</button>
+        </div>
+        <output id="formErrors" class="errors" aria-live="polite"></output>
+      </form>
+
+      <div class="preview">
+        <h3>Email preview</h3>
+        <textarea id="emailPreview" rows="8" readonly></textarea>
+      </div>
+
+      <section class="rationale">
+        <h2>Design rationale</h2>
+        <p><strong>Information first:</strong> Contact and social are visible before the form to reduce friction. Key actions are above the fold for mobile users.</p>
+        <p><strong>Validation & clarity:</strong> Required fields, future-date guard, and friendly inline hints reduce failed submissions.</p>
+        <p><strong>Accessibility:</strong> Semantic form controls with associated labels, an aria-live region for errors, and a logical focus order improve usability for all users.</p>
+        <p><strong>Business value:</strong> A mailto-based flow avoids infrastructure while enabling quick booking requests, suitable for a small venue starting digital transformation.</p>
+      </section>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Shaima Salim.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+  <script src="js/problem-solving.js" defer></script>
+</body>
+</html>

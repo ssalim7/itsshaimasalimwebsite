@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaima Salim — Web Dev & Digital Business (Year 2)</title>
+  <meta name="description" content="Portfolio website for Shaima Salim showcasing skills, projects, and a restaurant problem-solving prototype.">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='0.9em' font-size='90'>S</text></svg>">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Go to home">
+        <svg class="logo" viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="30" fill="currentColor"/></svg>
+        <span class="brand-text">Shaima</span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Toggle dark mode">🌓</button>
+        <ul>
+          <li><a class="nav-link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="nav-link" href="skills.html">Skills</a></li>
+          <li><a class="nav-link" href="showcase.html">Showcase</a></li>
+          <li><a class="nav-link" href="problem-solving.html">Problem-Solving</a></li>
+          <li><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="main" role="main">
+    <!-- Moving code banner -->
+    <section class="code-banner" aria-label="Decorative animated code" aria-hidden="true">
+      <div class="container">
+        <span class="code-line" data-rotate='[
+          "git commit -m \"Welcome to Shaima’s World\"",
+          "console.log(\"Hi, I’m Shaima 👋\")",
+          "npm run learn && npm run ship"
+        ]'></span>
+      </div>
+    </section>
+
+    <!-- Hero split -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Shaima Salim — Web Development & Digital Business (Year 2)</h1>
+          <p class="lede">I build clean, accessible, and business-focused web prototypes. I enjoy turning real problems into simple, working solutions — especially where design and data meet. Welcome to my little corner of the web.</p>
+          <div class="badges" role="list" aria-label="Highlights">
+            <span role="listitem" class="badge">Restaurant CTO Prototype</span>
+            <span role="listitem" class="badge">UX-First, W3C-Validated</span>
+            <span role="listitem" class="badge">Version-Controlled</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="showcase.html">View my projects</a>
+            <a class="btn btn-ghost" href="problem-solving.html">See the restaurant demo</a>
+          </div>
+          <p class="about">I’m Shaima, a second-year student with a growing toolkit in HTML, CSS, and JavaScript — and a curiosity for how the web transforms businesses. I like structuring ideas into tidy code and tidy pages (and yes, colour-coding my notes absolutely counts as a hobby). My goal this year is simple: ship small, ship often, and learn fast — without breaking production… or the kettle.</p>
+        </div>
+        <div class="hero-visual">
+          <figure class="avatar-card">
+            <img src="images/avatar.png" alt="Anime portrait of Shaima" loading="lazy" width="512" height="512">
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Shaima Salim. Built by hand with semantic HTML, CSS & JS.</p>
+      <ul class="social" aria-label="Social links">
+        <li><a href="https://www.linkedin.com/in/shaima-salim" target="_blank" rel="noopener" aria-label="LinkedIn">LinkedIn</a></li>
+        <li><a href="https://shaimasalimswebsite.vercel.app" target="_blank" rel="noopener" aria-label="Portfolio">Portfolio</a></li>
+        <li><a href="mailto:s.salim7@edu.salford.ac.uk" aria-label="Email Shaima">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
